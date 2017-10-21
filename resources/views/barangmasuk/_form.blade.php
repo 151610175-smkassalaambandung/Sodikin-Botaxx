@@ -39,9 +39,12 @@
 </div>
 
 <div class="form-group{{ $errors->has('tanggal') ? 'has-error' : '' }}">
-	<label>Tanggal Masuk</label>
-	<div class="form-line">
-		{!! Form::date('tanggal',null,['class'=>'form-control']) !!}
+	<label for="datetimepacker">Tanggal Masuk</label>
+	<div class="input-group date" id='datetimepicker1'>
+		{!! Form::text('tanggal',null,['class'=>'form-control','id'=>'datetimepicker1']) !!}
+		<span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
 		{!! $errors->first('tanggal','<p class="help-block">:message</p>') !!}
 	</div>
 </div>
@@ -63,7 +66,8 @@
 </div>
 
 <div class="form-group">
-	<div class="col-md-4 col-md-offset-2">
-		{!! Form::button('<span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Simpan', ['class'=>'btn btn-primary waves-effect','type'=>'submit']) !!}
+	<div class="col-md-4 col-md-offset-2 pull-right">
+		{!! Form::button('<span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Simpan', ['class'=>'btn btn-primary btn-md waves-effect','type'=>'submit']) !!}
+		{!! Form::button('<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Reset', ['class'=>'btn btn-danger btn-md waves-effect','type'=>'reset']) !!}
 	</div>
 </div>

@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.index')
 @section('content')
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<ul class="breadcrumb">
-					<li><a href="{{ url('/') }}">Dashboard</a></li>
+					<li><a href="{{ url('/') }}">Home</a></li>
 					<li><a href="{{ url('/admin/barangmasuk') }}">Barang Masuk</a></li>
 					<li class="active">Ubah Barang Masuk</li>
 				</ul>

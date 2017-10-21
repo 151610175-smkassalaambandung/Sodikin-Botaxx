@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.index')
 @section('content')
 	<div class="container">
 		<div class="row">
@@ -13,7 +13,7 @@
 					</div>
 
 					<div class="panel-body">
-						<p><a class="btn btn-info btn-md" href="{{ route('penyesuaianstok.create') }}">Tambah</a></p>
+						<p><a class="btn btn-info btn-md" href="{{ route('penyesuaianstok.create') }}">Tambah</a></p><br>
 						{!! $html->table(['class'=>'table-striped']) !!}
 					</div>
 				</div>

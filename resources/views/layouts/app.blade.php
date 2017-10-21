@@ -11,15 +11,17 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="shortcut icon" type="image/ico" href="{{asset('/images/favicon.png')}}">
+    <link rel="shortcut icon" type="image/ico" href="{{asset('/images/icon.png')}}">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/jquery.dataTables.css')}}" rel="stylesheet">
     <link href="{{asset('css/dataTables.bootstrap.css')}}" rel="stylesheet">
+
+    <link href="{{asset('time/css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet">
     <style>
     body{
-      background-image: url({{asset('images/bc.jpg')}});
+      background-image: url({{asset('images/bc2.jpg')}});
       background-size:cover;
       background-repeat:no-repeat;
       background-attachment:fixed;
@@ -27,8 +29,12 @@
     .panel-custom{
       background: rgba(255,255,255,0.5);
       border-radius: 15px;
-    }
+    }/*
     .navbar-custom{
+      background: rgba(255,255,255,0.5);
+      border-radius: 15px;
+    }*/
+    .jumbotron-custom{
       background: rgba(255,255,255,0.5);
       border-radius: 15px;
     }
@@ -90,7 +96,6 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -125,10 +130,22 @@
 
     <!-- Scripts -->
     <script src="{{asset('js/app.js')}}"></script>
-    <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{asset('web/js/jquery-1.10.2.min.js')}}"></script>
     <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
+
+   <!--  <script src="{{asset('time/js/bootstrap.min.js')}}"></script> -->
+    <script src="{{asset('time/js/moment.js')}}"></script>
+    <script src="{{asset('time/js/bootstrap-datetimepicker.min.js')}}"></script>
+    <script type="text/javascript">
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+        format: 'YYYY-MM-DD h:m:s A',
+      });
+  });
+
+</script>
     @yield('scripts')
 </body>
 </html>

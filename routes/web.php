@@ -11,12 +11,10 @@
 |
 */
 
-
 Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware'=>'web'], function(){
 Route::group(['prefix'=>'admin','middleware'=>['auth']], function(){

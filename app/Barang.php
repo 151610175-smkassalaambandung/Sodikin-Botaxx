@@ -18,4 +18,9 @@ class Barang extends Model
     {
     	return $this->hasMany('App\BarangMasuk');
     }
+
+     public function penempatanbarang()
+    {
+        return $this->hasMany('App\PenempatanBarang');
+    }
 }

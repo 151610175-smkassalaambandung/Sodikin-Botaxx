@@ -14,7 +14,7 @@ class UsersSeeder extends Seeder
     {
         //Membuat sample admin
         $admin = new User();
-        $admin->name = 'Admin STFI Bandung';
+        $admin->name = 'Admin';
         $admin->email = 'admin@gmail.com';
         $admin->password = bcrypt('rahasia');
         $admin->save();

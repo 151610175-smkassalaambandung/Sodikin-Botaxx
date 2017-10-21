@@ -24,6 +24,11 @@ class PenempatanBarang extends Model
     	return $this->belongsTo('App\Staff');
     }
 
+    public function barang()
+    {
+        return $this->belongsTo('App\Barang');
+    }
+
     public function penyesuaianstok()
     {
         return $this->hasMany('App\PenyesuaianStok');
